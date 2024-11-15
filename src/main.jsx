@@ -6,10 +6,33 @@ import {
 } from "react-router-dom";
 import './index.css'
 import App from './App.jsx'
+import Root from './Component/Root/Root.jsx';
+import Home from './Component/Home/Home.jsx';
+import Statstics from './Component/Statstics/Statstics.jsx'
+import AppliedJobs from './Component/AppliedJobs/AppliedJobs.jsx';
+import Blogs from './Component/Blogs/Blogs.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element:<Root></Root>,
+    children:[
+      {
+        path:'/',
+        element:<Home></Home>
+      },
+      {
+        path:'/statstics',
+        element:<Statstics></Statstics>
+      },
+      {
+        path:'/appliedjobs',
+        element:<AppliedJobs></AppliedJobs>
+      },
+      {
+        path:'/blog',
+        element:<Blogs></Blogs>
+      }
+    ]
   },
 ]);
 
