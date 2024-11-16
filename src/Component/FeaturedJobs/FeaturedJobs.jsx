@@ -12,7 +12,7 @@ const FeaturedJobs = () => {
     return (
         <div>
         <div className="space-y-3">
-            <h2 className="text-center text-5xl">Featured Jobs:{jobs.length}</h2>
+            <h2 className="text-center text-5xl">Featured Jobs</h2>
             <p className="text-[#757575] font-medium">Explore thousands of job opportunities with all the information you need. Its your future</p>
         </div>
         <div className="grid grid-cols-2 gap-4">
@@ -21,7 +21,9 @@ const FeaturedJobs = () => {
             }
         </div>
         <div className={joblength===jobs.length ? 'hidden' : ' ' }>
-                    <button className="btn btn-primary text-white w-48 mt-4" onClick={()=>setjonlength(jobs.length)}>Show all</button>
+           
+            <button className="btn btn-primary text-white w-48 mt-4" onClick={()=>setjonlength(jobs.length)}>Show all</button>
+                    
             </div>
         </div>
     );
