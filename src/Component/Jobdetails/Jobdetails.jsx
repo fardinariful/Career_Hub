@@ -4,12 +4,17 @@ import { PiSubtitlesBold } from "react-icons/pi";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Jobdetails = () => {
     const jobs = useLoaderData();
     const { id } = useParams();
     const idInt = parseInt(id);
     const job = jobs.find(job => job.id == idInt);
     console.log(job);
+    const applynow=()=>{
+        toast("Apply job successfully");
+    }
     return (
         <div>
             <div>
@@ -56,7 +61,8 @@ const Jobdetails = () => {
                     </div>
 
                     <div>
-                <button className="btn btn-primary w-full">Apply Now</button>
+                <button onClick={applynow} className="btn btn-primary w-full">Apply Now</button>
+                <ToastContainer />
             </div>
                 </div>
                 
