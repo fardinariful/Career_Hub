@@ -12,6 +12,7 @@ const Jobdetails = () => {
     console.log(job);
     return (
         <div>
+            <div>
             <h3 className="text-3xl font-bold">Job details</h3>
             <div className="grid gap-4 md:grid-cols-4">
                 <div className="md:col-span-3 text-left   space-y-4">
@@ -54,9 +55,15 @@ const Jobdetails = () => {
                     
                     </div>
 
-
-                </div>
+                    <div>
+                <button className="btn btn-primary w-full">Apply Now</button>
             </div>
+                </div>
+                
+            </div>
+            
+            </div>
+            
         </div>
     );
 };
