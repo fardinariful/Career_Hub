@@ -6,6 +6,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { savejobapplication } from "../../Utility/Localstorage";
 const Jobdetails = () => {
     const jobs = useLoaderData();
     const { id } = useParams();
@@ -13,6 +14,7 @@ const Jobdetails = () => {
     const job = jobs.find(job => job.id == idInt);
     console.log(job);
     const applynow=()=>{
+        savejobapplication(idInt);
         toast("Apply job successfully");
     }
     return (
